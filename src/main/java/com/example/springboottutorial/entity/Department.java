@@ -4,6 +4,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.validation.constraints.NotBlank;
 
 @Entity
 public class Department {
@@ -11,6 +12,8 @@ public class Department {
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	public Long departmentId;
+	
+	@NotBlank(message = "Add Department Name")
 	public String departmentName;
 	public String departmentAddress;
 	public String departmentCode;

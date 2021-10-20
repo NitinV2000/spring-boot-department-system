@@ -7,5 +7,6 @@ import com.example.springboottutorial.entity.Department;
 
 @Repository
 public interface DepartmentRepository extends JpaRepository<Department, Long>{
-
+	
+	public Department findByDepartmentName(String departmentName);
 }
