@@ -6,7 +6,16 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.validation.constraints.NotBlank;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
 @Entity
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
 public class Department {
 	
 	@Id
@@ -41,15 +50,15 @@ public class Department {
 	public void setDepartmentCode(String departmentCode) {
 		this.departmentCode = departmentCode;
 	}
-	public Department(Long departmentId, String departmentName, String departmentAddress, String departmentCode) {
-		super();
-		this.departmentId = departmentId;
-		this.departmentName = departmentName;
-		this.departmentAddress = departmentAddress;
-		this.departmentCode = departmentCode;
-	}
-	public Department() {
-	}
+//	public Department(Long departmentId, String departmentName, String departmentAddress, String departmentCode) {
+//		super();
+//		this.departmentId = departmentId;
+//		this.departmentName = departmentName;
+//		this.departmentAddress = departmentAddress;
+//		this.departmentCode = departmentCode;
+//	}
+//	public Department() {
+//	}
 	@Override
 	public String toString() {
 		return "Department [departmentId=" + departmentId + ", departmentName=" + departmentName
